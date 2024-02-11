@@ -1,9 +1,11 @@
+'use client'
 import Image from "next/image";
 import styles from "./page.module.css";
+import { styled } from "styled-components";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <Main className={styles.main}>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
@@ -90,6 +92,16 @@ export default function Home() {
           </p>
         </a>
       </div>
-    </main>
+    </Main>
   );
 }
+
+const Main = styled.main`
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+`
